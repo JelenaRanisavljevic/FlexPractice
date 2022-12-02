@@ -1,0 +1,192 @@
+*{
+    box-sizing: border-box;
+}
+  
+  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+  pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var, b, u, i, center,
+  dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot,
+  thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer,
+  header, hgroup, menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+}
+  
+ /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+  :root {
+    --color-azureish-white: #E2E5ED;
+    --color-white: #FFFFFF;
+    --color-light-blue: #A1ABC6;
+    --color-spanish-grey:#949491;
+    --color-dogwood-rose: #D81A5E;
+    --color-carrot-orange:#DF921E;
+}
+body {
+    background-color: var(--color-azureish-white);
+    font-family: 'Poppins', sans-serif;
+}
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1.25rem;
+}
+h4 {
+    font-size: 1rem;
+}
+.p-1 {
+    padding: 1rem
+}
+.px-2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.m-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.section {
+    margin: 1rem;
+}
+.section-title {
+    border-bottom: 1px solid black;
+    display: inline; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;  
+}
+.section-description {
+    color: var(--color-dogwood-rose);
+    font-family: 'Montserrat', sans-serif;
+}
+.section-button {
+    border: 3px solid;
+    border-color: var(--color-dogwood-rose);
+    color: var(--color-dogwood-rose);
+    background-color: transparent;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 2rem;
+
+}
+.card-image {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+.card {
+    background-color: var(--color-white);
+    text-align: left;
+    width: 350px;
+    position: relative;
+}
+.card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.card-tag {
+    position: absolute;
+    background-color: var(--color-white);
+    top: 1rem;
+    right: 1rem;
+    font-weight: 900;
+    border-radius: 5px;
+}
+.card-title {
+    letter-spacing: 0.05rem;
+    font-weight: 900;
+}
+.card-reviews, .review-icon {
+    color: var(--color-carrot-orange);
+}
+.card-review-section {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5rem
+}
+.card-footer {
+    display: flex;
+    column-gap: 40%;
+}
+.book-now-button {
+    border: 2px solid;
+    border-color: var(--color-dogwood-rose);
+    color: var(--color-dogwood-rose);
+    background-color: transparent;
+    padding: 0.5em 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+
+
+
+
+
+
+
+/*****rating*****/
+.star {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 0.25rem;
+}
+.clip-star {
+    background: var(--color-spanish-grey);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    
+    height: 20px;
+    width: 20px;
+  }
+.card-rating {
+    
+    color: var(--color-carrot-orange);
+}
+.checked {
+    background-color: var(--color-carrot-orange)
+}
+/**** For mobile devices*****/
+@media only screen and (max-width: 600px) 
+
+{
+    .container{
+        flex-direction: column;
+    }
+    .card-decription {
+        display: none;
+    }
+    .card-review-section {
+        display: none;
+    }
+}
+ /*****for tablets****/
+ 
